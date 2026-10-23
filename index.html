@@ -3,17 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- REPLACE: page title and description (shown in search results and link previews) -->
-  <title>[Rick Roberts]</title>
-  <meta name="description" content="[Rick Roberts] — [Fighting unwanted Kaiju]">
+  <title>Rick Roberts</title>
+  <meta name="description" content="Rick Roberts — Fighting unwanted Kaiju">
 
   <!-- Open Graph: how the page looks when shared on social media -->
-  <meta property="og:title" content="[Your Name]">
-  <meta property="og:description" content="[One-line tagline]">
-  <meta property="og:image" content="assets/images/profile.svg">
+  <meta property="og:title" content="Rick Roberts">
+  <meta property="og:description" content="Fighting unwanted Kaiju">
+  <meta property="og:image" content="assets/images/rick-science-patrol.jpg">
   <meta property="og:type" content="website">
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <!-- Fonts: Dela Gothic One (heavy Japanese title-card display), Racing Sans One (Speed Racer), Archivo (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&family=Dela+Gothic+One&family=Racing+Sans+One&display=swap">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/main.js" defer></script>
 </head>
@@ -23,7 +26,10 @@
   <!-- ===== Header / nav ===== -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#home">[YN]</a><!-- REPLACE: your initials or name -->
+      <a class="brand" href="#home" aria-label="Rick Roberts, home">
+        <span class="brand-badge" aria-hidden="true">R</span>
+        <span class="brand-name">Rick Roberts</span>
+      </a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
         <span class="nav-toggle-bar"></span>
       </button>
@@ -35,17 +41,20 @@
         </ul>
       </nav>
     </div>
+    <div class="race-stripes" aria-hidden="true"></div>
   </header>
 
   <main id="main">
     <!-- ===== Hero ===== -->
     <section id="home" class="hero">
       <div class="container hero-inner">
-        <!-- REPLACE: put your photo at assets/images/ and update src + alt -->
-        <img class="hero-photo" src="assets/images/profile.svg" alt="Portrait of [Your Name]" width="160" height="160">
-        <div>
-          <h1>[Your Name]</h1>
-          <p class="tagline">[Your role or a one-line description of what you do]</p>
+        <figure class="tv-frame">
+          <img class="hero-photo" src="assets/images/rick-science-patrol.jpg" alt="Rick Roberts in an orange Science Patrol uniform and silver helmet, holding a beta capsule aloft" width="2000" height="2000">
+        </figure>
+        <div class="hero-text">
+          <p class="kana" lang="ja" aria-hidden="true">リック・ロバーツ</p>
+          <h1>Rick Roberts</h1>
+          <p class="tagline">Fighting unwanted Kaiju</p>
           <div class="hero-actions">
             <a class="button" href="#contact">Get in touch</a>
             <!-- Drop your résumé at assets/resume.pdf, or delete this button -->
@@ -57,33 +66,42 @@
 
     <!-- ===== About ===== -->
     <section id="about" class="section">
-      <div class="container narrow">
-        <h2>About</h2>
-        <!-- REPLACE: 2–3 short paragraphs -->
-        <p>[Who you are and what you do — one or two sentences.]</p>
-        <p>[Your background, experience, or what drives your work.]</p>
-        <p>[Something personal: interests, hobbies, where you're based.]</p>
-        <p class="currently"><strong>Currently:</strong> [what you're working on or learning right now]</p>
+      <div class="container about-inner">
+        <div class="about-text">
+          <h2><span class="ep">EP. 01</span>About</h2>
+          <!-- REPLACE: 2–3 short paragraphs -->
+          <p>[Who you are and what you do — one or two sentences.]</p>
+          <p>[Your background, experience, or what drives your work.]</p>
+          <p>[Something personal: interests, hobbies, where you're based.]</p>
+          <p class="currently"><span class="color-timer" aria-hidden="true"></span><strong>Currently:</strong> [what you're working on or learning right now]</p>
+        </div>
+        <figure class="poster-card">
+          <img src="assets/images/ultraman-poster.jpg" alt="Ultraman box art: the silver and red hero raises one hand above a city skyline with kaiju, under the words Protector of the Universe" width="1000" height="1261" loading="lazy">
+          <figcaption>Inspiration: <cite>Ultraman</cite> (1966)</figcaption>
+        </figure>
       </div>
     </section>
 
     <!-- ===== Highlights ===== -->
     <section id="highlights" class="section section-alt">
       <div class="container">
-        <h2>Highlights</h2>
+        <h2><span class="ep">EP. 02</span>Highlights</h2>
         <!-- REPLACE: 3 things you want visitors to know about (projects, roles, interests) -->
         <div class="cards">
           <article class="card">
+            <p class="card-num">No.1</p>
             <h3>[Highlight one]</h3>
             <p>[One sentence about it.]</p>
             <a href="#">Learn more →</a>
           </article>
           <article class="card">
+            <p class="card-num">No.2</p>
             <h3>[Highlight two]</h3>
             <p>[One sentence about it.]</p>
             <a href="#">Learn more →</a>
           </article>
           <article class="card">
+            <p class="card-num">No.3</p>
             <h3>[Highlight three]</h3>
             <p>[One sentence about it.]</p>
             <a href="#">Learn more →</a>
@@ -95,7 +113,7 @@
     <!-- ===== Contact / Links ===== -->
     <section id="contact" class="section">
       <div class="container narrow">
-        <h2>Contact</h2>
+        <h2><span class="ep">EP. 03</span>Contact</h2>
         <p>[A short invitation, e.g. "I'm always happy to connect — reach out any time."]</p>
         <!-- REPLACE: your real addresses; delete any you don't use -->
         <ul class="links">
@@ -109,8 +127,9 @@
 
   <!-- ===== Footer ===== -->
   <footer class="site-footer">
+    <div class="race-stripes" aria-hidden="true"></div>
     <div class="container footer-inner">
-      <p>&copy; <span id="year">2026</span> [Your Name]</p>
+      <p>&copy; <span id="year">2026</span> Rick Roberts</p>
       <a href="#home">Back to top ↑</a>
     </div>
   </footer>
